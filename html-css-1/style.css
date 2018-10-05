@@ -1,0 +1,64 @@
+body {
+  background-color: rgba(112, 229, 243, 0.57);
+}
+
+p{
+  color: black;
+  font-size: 20px
+}
+
+
+
+
+
+.title_border_table {
+  border: 4px black solid;
+  background-color: #ff6600;
+  border-radius: 20px 10px 20px 10px ;
+  width: 60%;
+  margin: 10px 38%;
+}
+
+p.title_border{
+  border: 4px #ffa366 solid;
+  background-color: #ff6600;
+  border-radius: 20px 10px 20px 10px ;
+  width: 360px;
+  margin: 10px 38%;
+  text-align: center;
+}
+.link {
+  border: 4px #ffa366 solid;
+  background-color: #ff6600;
+  border-radius: 20px 20px 20px 20px ;
+  width: 500px;
+  text-align: left;
+  color: yellow;
+  position: absolute; top:1%; left:36%;
+}
+a {
+  color: yellow;
+}
+a:hover {
+  color: black;
+  text-decoration: underline;
+}
+
+iframe.border {
+  border: 4px  #ff6600 solid
+  border radius: 10px 10px 10px 10px;
+}
+
+.antwoord{
+  color:  #ff6600;
+}
+
+
+.antwoord:hover {
+  color :black ;
+  background-color:blue;
+}
+
+.title {
+  color: blue;
+}
