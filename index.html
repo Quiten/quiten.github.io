@@ -7,14 +7,17 @@
     <script src="/script.js"></script>
   </head>
   <body>
-    <div class="menu_menu1" style="display:none" id="mySidebar">
-      <button class="menu_button"
-      onclick="menu_close()">Close &times;</button>
-      <a href="#" class="menu_link">Link 1</a>
-      <a href="#" class="menu_link">Link 2</a>
-      <a href="#" class="menu_link">Link 3</a>
+    <div id="sidebar" class="sidebar">
+        <a href="javascript:void(0)" class"close"
+        onclick="close_menu()">&times;</a>
+        <a href="index.html">Home</a>
+        <a href="project.html">Project</a>
+        <a href="#">Contact</a>
+        <a href="#">Badges</a>
+        <a href="#">Contact</a>
     </div>
-
-      <button class="menu_button" onclick="menu_open()">&#9776;</button>
+    <span onclick="open_menu()">open</span>
+    <div id="main">
+    </div>
   </body>
 </html>

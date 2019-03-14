@@ -1,6 +1,6 @@
-function menu_open() {
-    document.getElementById("mySidebar").style.display = "block";
+function open_menu() {
+  document.getElementById("sidebar").style.width = "250px";
 }
-function menu_close() {
-    document.getElementById("mySidebar").style.display = "none";
+function close_menu() {
+  document.getElementById("sidebar").style.width = "0";
 }
