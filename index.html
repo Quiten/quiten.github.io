@@ -7,6 +7,14 @@
     <script src="/script.js"></script>
   </head>
   <body>
-      <button class="w3-button w3-white w3-xxlarge" onclick="w3_open()">&#9776;</button>
+    <div class="menu_menu1" style="display:none" id="mySidebar">
+      <button class="menu_button"
+      onclick="menu_close()">Close &times;</button>
+      <a href="#" class="menu_link">Link 1</a>
+      <a href="#" class="menu_link">Link 2</a>
+      <a href="#" class="menu_link">Link 3</a>
+    </div>
+
+      <button class="menu_button" onclick="menu_open()">&#9776;</button>
   </body>
 </html>
