@@ -34,5 +34,6 @@ body {
   margin-left: 50px;
 }
 .button{
-  
+  display: block;
+  color: blue;
 }
