@@ -37,6 +37,7 @@ body {
   background-color: #1589FF;
   padding:8px 14px;
   display:inline-block;
+  font-size:8px;
 }
 .button:hover{
   background: #6495ED;
