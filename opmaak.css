@@ -1,5 +1,5 @@
 body {
-  background-color: lightblue;
+  background-color: #38ACEC;
 }
 .sidenav {
   height: 100%;
@@ -14,7 +14,7 @@ body {
   padding-top: 60px;
 }
 .sidenav a {
-  padding: 8px 8px 8px 28px;
+  padding: 8px 8px 8px 22px;
   text-decoration: none;
   font-size: 25px;
   color: #818181;
@@ -34,10 +34,10 @@ body {
   margin-left: 50px;
 }
 .button{
-  background-color: red;
-  padding:14px 26px;
-  display:block;
+  background-color: #1589FF;
+  padding:8px 14px;
+  display:inline-block;
 }
 .button:hover{
-  background:green;
+  background: #6495ED;
 }
