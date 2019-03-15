@@ -38,6 +38,8 @@ body {
   padding:10px 24px;
   display:inline-block;
   font-size:14px;
+  text-decoration: none;
+  overflow-y: hidden;
 }
 .button:hover{
   background: #21ABE6;
