@@ -34,7 +34,10 @@ body {
   margin-left: 50px;
 }
 .button{
-  display: block;
-  background-color: blue;
+  background-color: red;
   padding:14px 26px;
+  display:block;
+}
+.button:hover{
+  background:green;
 }
