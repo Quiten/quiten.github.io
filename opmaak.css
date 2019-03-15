@@ -35,5 +35,6 @@ body {
 }
 .button{
   display: block;
-  color: blue;
+  background-color: blue;
+  padding:14px 26px;
 }
