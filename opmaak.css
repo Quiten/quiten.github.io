@@ -39,7 +39,8 @@ body {
   font-size:14px;
   text-decoration: none;
   overflow-y: hidden;
+  border:none;
 }
 .button:hover{
-  background: #21ABE7; //original color was 21ABE6
+  background: #214BE7; //original color was 21ABE6
 }
