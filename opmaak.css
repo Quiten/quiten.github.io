@@ -37,8 +37,6 @@ body {
   background-color: #0A9BD9;
   padding:10px 24px;
   font-size:14px;
-  text-decoration: none;
-  overflow-y: hidden;
   border:none;
 }
 .button:hover{
