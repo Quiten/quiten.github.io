@@ -35,9 +35,11 @@ body {
 }
 .button{
   background-color: #0A9BD9;
-  padding:10px 24px;
+  padding:100px 24px;
   font-size:20px;
   border:none;
+  top:0;
+  left:0;
 }
 .button:hover{
   background: #21ABE6; //original color was 21ABE6
