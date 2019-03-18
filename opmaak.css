@@ -39,7 +39,7 @@ body {
   width:100%;
   background-color:#0A9BD9;
   border:none;
-  
+  position: absolute;
 }
 .button{
   background-color: #0A9BD9;
