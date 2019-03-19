@@ -57,6 +57,7 @@ body {
   width:100%;
 }
 .title{
+  top:10%;
   left:50%;
   padding:6px 12px 6px 12px;
   font-size: 32px;
