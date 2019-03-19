@@ -61,3 +61,7 @@ body {
   font-size: 32px;
   border:none;
 }
+.secret{
+  width:100%;
+  top:10%;
+}
