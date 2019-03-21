@@ -62,4 +62,5 @@ body {
   padding:6px 12px 6px 12px;
   font-size: 32px;
   border:none;
+  position: absolute;
 }
