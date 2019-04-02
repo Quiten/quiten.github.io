@@ -64,3 +64,30 @@ body {
   border:none;
   position: absolute;
 }
+.div{
+  top:120px;
+  left:10%;
+  background:#6D60D8;
+  padding:1.5px 10px 1.5px 3px;
+  position:absolute;
+  border-left:6px solid #160A7F;
+}
+.skills_bars{
+  top:200px;
+  left:10%;
+  position: absolute;
+  border-left:6px solid #160A7F;
+  padding:1.5px 3px 1.5px 3px;
+  width:30%;
+}
+.container{
+  width: 100%;
+  background-color: #ddd;
+}
+.skills{
+  text-align: right;
+  padding: 10px;
+  color: white;
+}
+.js{width: 20%; background-color: #f44336;}
+.html{width:30%; background-color:#419633;}
