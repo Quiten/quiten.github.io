@@ -3,7 +3,7 @@ body {
 }
 .sidenav {
   height: 100%;
-  width: 0;
+  width: 0px;
   position: fixed;
   z-index: 3;
   top: 0;
@@ -91,3 +91,8 @@ body {
 }
 .js{width: 20%; background-color: #f44336;}
 .html{width:30%; background-color:#419633;}
+
+
+@media only screen and (max-width: 600px){ 
+
+}
