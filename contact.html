@@ -18,16 +18,23 @@
       <button onclick="open_menu()" class="button"><img src="https://img.icons8.com/ios/35/000000/menu.png"></button>
       <a href="index.html"><img border="0" src="https://img.icons8.com/ios/35/000000/home.png"></a>
     </div>
-    <div class="main">
     <h1 class="title">Profiel</h1>
+    <div class="main">
     <div class="div_main">
       <p class="big">Een foto van <span id="rainbow">『BITES ZA DUSTO』</span></p>
       <img id="image" class="item" src="./img/another_one_bites_the_dust.jpg">
     </div>
+    <div class="div_main">
+      <p class="big">Een foto van <span id="rainbow">『KING CRIMSON』</span></p>
+      <button id="king" type="button" onclick="forwardAudio()"></button>
+    </div>
     </div>
 
-    <audio controls autoplay>
+    <audio controls autoplay ID="Player">
       <source src="./sounds/Killer.mp3" type="audio/mpeg">
+    </audio>
+    <audio controls ID="Son">
+      <source src="./sounds/King.mp3" type="audio/mpeg">
     </audio>
   </body>
 </html>

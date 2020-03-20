@@ -51,14 +51,15 @@ body {
   background: #21ABE6; /* original color was 21ABE6 */
 }
 .main {
-  position: absolute;
-  top: 10%;
-  z-index:0;
-  width:100%;
+  top:20%;
+  left: 10%;
+  width: 80%;
+  padding:1.5px 10px 1.5px 3px;
+  position:absolute;
 }
 .title{
-  top:10%;
-  left:40%;
+  top: 10%;
+  left: 40%;
   padding:6px 12px 6px 12px;
   font-size: 32px;
   border:none;
@@ -80,11 +81,8 @@ body {
 }
 
 .div_main{
-  top:120px;
-  left:10%;
   width: 80%;
   padding:1.5px 10px 1.5px 3px;
-  position:absolute;
   background: #ddd;
   display: flex;
   justify-content: space-evenly;
@@ -110,6 +108,18 @@ body {
   padding:1.5px 10px 1.5px 3px;
   position:absolute;
   background: #ddd;
+}
+
+audio{
+  display: none;
+}
+
+
+#king{
+  background-image: url(./img/crimson.jpg);
+  background-size: 100%;
+  height: auto;
+  width: 20%;
 }
 
 #blok{
