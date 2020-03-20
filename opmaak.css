@@ -58,11 +58,17 @@ body {
 }
 .title{
   top:10%;
-  left:50%;
+  left:40%;
   padding:6px 12px 6px 12px;
   font-size: 32px;
   border:none;
   position: absolute;
+}
+
+.big{
+  padding:6px 12px 6px 12px;
+  font-size: 32px;
+  border:none;
 }
 .div{
   top:120px;
@@ -80,6 +86,12 @@ body {
   padding:1.5px 10px 1.5px 3px;
   position:absolute;
   background: #ddd;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.item{
+  align-self: center;
 }
 
 .div_badge{
@@ -88,6 +100,7 @@ body {
   width: 80%;
   padding:1.5px 10px 1.5px 3px;
   position:absolute;
+  background-color: #ddd;
 }
 
 .div_con{
@@ -99,12 +112,11 @@ body {
   background: #ddd;
 }
 
-#profiel_1{
-  padding-left: 2px;
-}
-
-#profiel_2{
+#blok{
+  width: 300px;
+  height: auto;
   
+  background-color: red;
 }
 
 #image{
