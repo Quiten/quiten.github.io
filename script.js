@@ -26,3 +26,9 @@ function forwardAudio() {
   audio.currentTime += 10.0
 
 }
+
+function resetAudio() {
+  audio = document.getElementById('player');
+  crim = document.getElementById('Son');
+  
+}
