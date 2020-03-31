@@ -83,6 +83,7 @@ body {
 .div_main{
   width: 80%;
   padding:1.5px 10px 1.5px 3px;
+  height: auto;
   background: #ddd;
   display: flex;
   justify-content: space-evenly;
@@ -118,8 +119,30 @@ audio{
 #king{
   background-image: url(./img/crimson.jpg);
   background-size: 100%;
-  height: auto;
-  width: 20%;
+  height: 200px;
+  width: 30%;
+  object-fit: scale-down;
+}
+
+#dusto{
+  background-image: url(./img/fool.png);
+  background-size: 100%;
+  height: 200px;
+  width: 30%;
+}
+
+#requiem{
+  background-image: url(./img/goldDude.jpg);
+  background-size: 100%;
+  height: 300px;
+  width: 30%;
+}
+
+#world{
+  background-image: url(./img/TheWorld.jpg);
+  background-size: 100%;
+  height: 200px;
+  width: 30%;
 }
 
 #blok{
