@@ -6,6 +6,10 @@ p{
   padding: 5px;
 }
 
+li{
+  text-decoration: none;
+}
+
 .sidenav {
   height: 100%;
   width: 0px;
