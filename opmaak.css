@@ -61,9 +61,10 @@ li{
 }
 .main {
   top:20%;
-  left: 20%;
-  width: 80%;
-  padding:1.5px 10px 1.5px 3px;
+  left: 10%;
+  width: 75%;
+  padding:10px 0px 10px 0px;
+  background-color: #ddd;
   position:absolute;
 }
 .title{
@@ -90,10 +91,10 @@ li{
 }
 
 .div_main{
-  width: 80%;
+  width: auto;
   padding:1.5px 10px 1.5px 3px;
   height: auto;
-  background: #ddd;
+  background: #f0f0f0;;
   display: flex;
   justify-content: space-around;
 }
@@ -103,10 +104,10 @@ li{
 }
 
 .div_badge{
-  width: 80%;
+  width: 98.8%;
   padding:1.5px 10px 1.5px 3px;
   position:absolute;
-  background-color: #ddd;
+  background-color: #f0f0f0;
 }
 
 .div_con{
@@ -115,7 +116,7 @@ li{
   width: 80%;
   padding:1.5px 10px 1.5px 3px;
   position:absolute;
-  background: #ddd;
+  background: #f0f0f0;
 }
 
 audio{
@@ -179,7 +180,7 @@ audio{
 }
 .container{
   width: 100%;
-  background-color: #ddd;
+  background-color: #f0f0f0;
 }
 .skills{
   text-align: right;
