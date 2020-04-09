@@ -143,6 +143,7 @@ audio{
   background-image: url(./img/goldDude.jpg);
   background-size: 100%;
   width:30%;
+  height: 300px;
 }
 
 #world{

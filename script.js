@@ -23,8 +23,6 @@ function pausesong2() {
 }
 }
 
-document.getElementById("Gold").addEventListener("click", stopsong());
-
 function stopsong() {
   audio = document.getElementById('Player');
   exp = document.getElementById("Gold");
