@@ -9,8 +9,8 @@
 // @icon         https://www.google.com/s2/favicons?sz=64&domain=reddit.com
 // @require	     https://cdn.jsdelivr.net/npm/toastify-js
 // @resource     TOASTIFY_CSS https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css
-// @updateURL    https://github.com/r-placestart/place-taskbar-bot/raw/main/placetaskbar.user.js
-// @downloadURL  https://github.com/r-placestart/place-taskbar-bot/raw/main/placetaskbar.user.js
+// @updateURL    https://github.com/Quiten/quiten.github.io/blob/master/testB.js
+// @downloadURL  https://github.com/Quiten/quiten.github.io/blob/master/testB.js
 // @grant        GM_getResourceText
 // @grant        GM_addStyle
 // ==/UserScript==
@@ -185,7 +185,7 @@ function updateOrders() {
 				duration: -1,
 				onClick: () => {
 					// Tapermonkey captures this and opens a new tab
-					window.location = 'https://github.com/r-placestart/place-taskbar-bot/raw/main/placetaskbar.user.js'
+					window.location = 'https://github.com/Quiten/quiten.github.io/blob/master/testB.js'
 				}
 			}).showToast();
 
