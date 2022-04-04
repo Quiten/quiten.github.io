@@ -1,0 +1,22 @@
+{
+    "version": 14,
+    "structures": {
+        "home-area": {
+            "priority": 2,
+            "pixels": [
+                {
+                    "x": 3,
+                    "y": 1085,
+                    "color": 2,
+                    "priority": 3
+                }
+            ]
+        }
+    },
+    "priorities": {
+        "0": 0,
+        "1": 1,
+        "2": 5,
+        "3": 25
+    }
+}
