@@ -1,47 +1,36 @@
-function open_menu() {
-  document.getElementById("sidebar").style.width = "200px";
-}
-function close_menu() {
-  document.getElementById("sidebar").style.width = "0";
-}
+const carousel = document.querySelector(".carousel");
+firstImg = carousel.querySelectorAll("div")[0];
+component = document.querySelector(".component");
+arrow = document.querySelectorAll(".component i");
 
+let isDragStart = false, prevPageX, prevScrollLeft;
+let firstImgWidth = component.clientWidth;
 
-function playsong() {
-  document.getElementById("Player").play();
-}
+arrow.forEach(icon => {
+  icon.addEventListener("click", () => {
+      carousel.scrollLeft += icon.id == "left" ? -firstImgWidth : firstImgWidth;
+  })
+});
 
-function pausesong2() {
-  myAudio = document.getElementById("Player");
-  d = document.getElementById("Wereld");
-
-  d.play();
-
-  if(myAudio.paused){
-    myAudio.play();
-} else {  
-  myAudio.pause();
-}
+const dragStart = (e) => {
+  isDragStart = true;
+  prevPageX = e.pageX;
+  prevScrollLeft = carousel.scrollLeft;
 }
 
-function stopsong() {
-  audio = document.getElementById('Player');
-  exp = document.getElementById("Gold");
-  audio.currentTime = 0;
-  exp.play();
-  audio.play();
+const dragging = (e) => {
+  if (!isDragStart) return;
+  e.preventDefault();
+  carousel.classList.add("dragging");
+  let positionDiff = e.pageX - prevPageX;
+  carousel.scrollLeft = prevScrollLeft - positionDiff;
 }
 
-function forwardAudio() {
-  audio = document.getElementById('Player');
-  crim = document.getElementById("Son");
-  crim.play();
-  audio.currentTime += 10.0
-
+const dragStop = () => {
+  carousel.classList.remove("dragging");
+  isDragStart = false;
 }
 
-function playbackAudio() {
-  audio = document.getElementById('Player');
-  b = document.getElementById("Bites");
-  b.play();
-  audio.currentTime -= 10.0;
-}
+carousel.addEventListener("mousedown", dragStart);
+carousel.addEventListener("mousemove", dragging);
+carousel.addEventListener("mouseup", dragStop);
