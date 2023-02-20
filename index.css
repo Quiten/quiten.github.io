@@ -1,6 +1,6 @@
 @keyframes rainbow{
   100%,0%{
-    background-color: rgb(255,0,0);
+    background-color: rgb(255, 0, 0);
   }
   8%{
     background-color: rgb(255,127,0);
@@ -39,7 +39,7 @@
 
 @media screen {
   .component{
-    width: 70vw;
+  width: 70vw;
   }
 }
 
@@ -57,18 +57,23 @@
 
 
 body {
+  -webkit-transition: background-color 1s ease-out;
+  -moz-transition: background-color 1s ease-out;
+  -o-transition: background-color 1s ease-out;
+  transition: background-color 1s ease-out;
+
   display: flex;
   padding: 0 10px;
   align-items: center;
   justify-content: center;
   min-height: 100vh;
-  background: #343F4F;
+  background-color: #343F4F;
 }
 
 .component {
   display: flex;
   position: absolute;
-  max-width: 1200px;
+  max-width: 90vw;
   top: 50px;
 }
 
@@ -100,11 +105,11 @@ body {
   overflow-x: hidden;
   scroll-behavior: smooth;
   scroll-snap-type: x mandatory;
-  width: 800px;
+  width: 1000px;
 }
 
 .carousel.dragging{
-  /* cursor: grab; */
+  cursor: grab;
   scroll-behavior: auto;
 }
 
@@ -113,26 +118,35 @@ body {
 }
 
 .carousel div{
+  -webkit-transition: background-color 2s ease-out;
+  -moz-transition: background-color 2s ease-out;
+  -o-transition: background-color 2s ease-out;
+  transition: background-color 2s ease-out;
+
   height: 400px;
-  width: calc(100%/1);
+  width: calc(100%/1.01);
   margin: 0 20px;
   flex-shrink: 0;
+  border:1px solid black;
 }
 
 .carousel div:first-child{
   margin-left: 0px;
 }
 
+.carousel div:last-child{
+  margin-right: 0px;
+}
+
 #slide1{
-  background-color: yellow;
+  /* background-color: #ffff00; */
 }
 
 #slide2{
-  background-color: green;
-  
+  /* background: rgb(0, 128, 0);   */
 }
 #slide3{
-  background-color: purple;
+  /* background: rgb(128, 0, 128); */
 }
 
 #slideL{
