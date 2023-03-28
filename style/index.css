@@ -63,8 +63,8 @@ html {
   position: absolute;
   width: 90%;
   bottom:10%;
-  left:50%;
-  transform: translate(-50%, -50%);
+  left: 0px;
+  text-align: center;
   color: rgb(0, 0, 0); 
   padding: 0px;
   margin: 0px;
@@ -92,12 +92,12 @@ html {
 }
 
 .progress{
+  transform: translate(0%, -50%);
   width: 10%;
   height: 7px;
   background-color: rgb(211, 211, 211, 0.7);
   /* border-radius: 30px; */
-  position: absolute;
-  display: inline-block;
+  position:absolute;
   bottom: 0px;
   overflow: hidden;
   /* 10 40 75 */

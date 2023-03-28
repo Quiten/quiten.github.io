@@ -158,11 +158,10 @@ function currentItem () {
 function changeProgressPosition () {
   for (let i = 0; i < list.length; i++){
     if (isInViewport(carousel.querySelectorAll("div")[i]) == true){
-      progressbar = document.getElementsByClassName("progress")[0];
       item = document.getElementsByClassName("is-current")[0];
       var rect = item.getBoundingClientRect();
-      progressBar.style.left = (rect.x - rect.width) + "px";
-      console.log(progressBar);
+      document.getElementsByClassName("progress")[0].style.left = (item.offsetLeft) + "px";
+      document.getElementsByClassName("progress")[0].style.width = rect.width + 'px';
     }
   }
 }
