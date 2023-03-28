@@ -36,7 +36,7 @@ window.onresize = function() {
 progressBar = document.getElementById("bar");
 setInterval(setProgress, 10);
 totalSeconds = 0;
-maxTime = 500
+maxTime = 600
 
 function setProgress() {
   if (totalSeconds >= maxTime){

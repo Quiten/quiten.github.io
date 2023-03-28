@@ -57,6 +57,15 @@
     transform: translateY(-8px) rotate(-45deg);
   }
 
+  .nav-brand{
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    top: 0px;
+    position: absolute;
+    left: 40%;
+    transform: translate(-50, -50%) ;
+  }
+
   .nav-menu{
     position: fixed;
     /* left: -1000%; */
@@ -183,7 +192,12 @@ header {
 }
 
 .nav-brand{
-  font-size: 2rem;
+  margin-top: 1vh;
+  margin-bottom: 1vh;
+  height: 5vh;
+  width: auto;
+  filter: invert(78%) sepia(67%) saturate(2436%) hue-rotate(343deg) brightness(102%) contrast(105%);
+  overflow: hidden;
 }
 
 .nav-link{
@@ -292,7 +306,7 @@ body {
   width: 95%;
   flex-shrink: 0;
   background: none;
-  border:1px solid black;
+  /* border:1px solid black; */
 }
 
 .carousel div:not(:first-child){
