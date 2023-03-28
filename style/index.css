@@ -56,16 +56,15 @@
 } */
 
 .progress{
-  width: 200px;
+  width: 30%;
   height: 10px;
-  position: fixed;
-  top: 20px;
-  left: 20px;
+  position: relative;
   background-color: rgb(211, 211, 211, 0.7);
   border-radius: 30px;
-  z-index: 1;
-  position: relative;
-  top: 30vh;
+  position: absolute;
+  top:80%;
+  left:50%;
+  transform: translate(-50%, -50%);
 }
 
 .bar{
@@ -161,7 +160,6 @@ body {
 }
 
 .carousel div{
-  border: #000 1 1;
   -webkit-transition: background-color 2s ease-out;
   -moz-transition: background-color 2s ease-out;
   -o-transition: background-color 2s ease-out;
@@ -174,7 +172,7 @@ body {
   margin: 0 20px;
   flex-shrink: 0;
   background: none;
-  /* border:1px solid black; */
+  border:1px solid black;
 }
 
 .carousel div:first-child{
@@ -184,8 +182,3 @@ body {
 .carousel div:last-child{
   margin-right: 5px;
 }
-
-#slideL{
-  animation: rainbow 3s infinite;
-}
-

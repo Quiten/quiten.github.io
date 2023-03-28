@@ -4,11 +4,23 @@ component = document.querySelector(".component");
 arrow = document.querySelectorAll(".component i");
 list = carousel.querySelectorAll("div");
 let isDragStart = false, prevPageX, prevScrollLeft, positionDiff;
-let firstImgWidth = component.clientWidth + component.clientWidth * 0.006;
+let firstImgWidth = component.offsetWidth * 1.005;
+
+function updateCarousel () {
+  scrollLeft = 0;
+  console.log(carousel.offsetWidth);
+  return scrollLeft;
+}
+
+window.onresize = function(update) {
+  carousel.scrollLeft = updateCarousel();
+  firstImgWidth = component.offsetWidth*1.005;
+};
 
 progressBar = document.getElementById("bar");
-totalSeconds = 1;
-maxTime = 200
+setInterval(setProgress, 10);
+totalSeconds = 0;
+maxTime = 500
 
 
 // var slides = new Slides(".carousel", {
@@ -21,12 +33,11 @@ maxTime = 200
 //   },
 // });
 
-setInterval(setProgress, 10);
 function setProgress() {
   if (totalSeconds >= maxTime){
     totalSeconds = 0;
     percentage = 0;
-    if (carousel.scrollLeft < component.offsetWidth*3){
+    if (carousel.scrollLeft < firstImgWidth*2){
       autoForward();
     } else {
       autoBackward();
@@ -49,7 +60,7 @@ function autoForward () {
 
 function autoBackward () {
   carousel.scrollLeft += -firstImgWidth*4;
-  setTimeout(colorChange, 700);
+  setTimeout(colorChange, 600);
 }
 
 arrow.forEach(icon => {
@@ -72,7 +83,6 @@ function isInViewport(el) {
 
 const autoSlide = () => {
   positionDiff = Math.abs(positionDiff);
-  let firstImgWidth = component.clientWidth + component.clientWidth * 0.005;
   let valDifference = firstImgWidth - positionDiff;
 
   if (carousel.scrollLeft > prevScrollLeft){
