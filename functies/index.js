@@ -16,16 +16,21 @@ function start() {
 }
 start()
 
+function update(){
+  setTimeout(colorChange, 800);
+  setTimeout(currentItem, 800);
+}
+
 function updateCarousel () {
   scrollLeft = 0;
   colorChange();
   return scrollLeft;
 }
 
-window.onresize = function(update) {
+window.onresize = function() {
   carousel.scrollLeft = updateCarousel();
   firstImgWidth = component.clientWidth;
-  setTimeout(colorChange, 1000);
+  update();
   totalSeconds = 0;
 };
 
@@ -57,18 +62,19 @@ function setProgress() {
 
 function autoForward () {
   carousel.scrollLeft += firstImgWidth*1.00005;
-  setTimeout(colorChange, 1000);
+  update();
 }
 
 function autoBackward () {
   carousel.scrollLeft = 0;
   setTimeout(colorChange, 250*(list.length));
+  setTimeout(currentItem, 1000)
 }
 
 arrow.forEach(icon => {
   icon.addEventListener("click", () => {
       carousel.scrollLeft += icon.id == "left" ? -firstImgWidth : firstImgWidth;
-      setTimeout(colorChange, 1000);
+      update();
   })
 });
 
@@ -110,7 +116,7 @@ const dragStop = () => {
   carousel.classList.remove("dragging");
   isDragStart = false;
   autoSlide();
-  setTimeout(colorChange, 500);
+  update();
 }
 
 function colorChange () {
@@ -128,18 +134,34 @@ function colorChange () {
   }
 }
 
+function currentItem () {
+  var lis = document.getElementsByClassName("progress-list")[0].getElementsByTagName("li");
+  for (let i = 0; i < list.length; i++){
+    if (isInViewport(carousel.querySelectorAll("div")[i]) == true){
+      pastItem = document.getElementsByClassName("is-current")[0];
+      pastItem.classList.remove("is-current");
+      lis[i].classList.add("is-current");
+    }
+  }
+}
+
+function changeProgressPosition () {
+  for (let i = 0; i < list.length; i++){
+    if (isInViewport(carousel.querySelectorAll("div")[i]) == true){
+      progressbar = document.getElementById("progress");
+      bar = document.getElementById("bar");
+      currentItem = document.getElementsByClassName("is-current")[0];
+      var rect = currentItem.getBoundingClientRect();
+      
+    }
+  }
+}
+
+
 carousel.addEventListener("mousedown", dragStart);
 carousel.addEventListener("touchstart", dragStart);
 carousel.addEventListener("mousemove", dragging);
 carousel.addEventListener("touchmove", dragging);
 carousel.addEventListener("mouseup", dragStop);
 carousel.addEventListener("touchend", dragStop);
-
-function currentItem () {
-
-}
-
-function changeProgressPosition () {
-
-}
 
