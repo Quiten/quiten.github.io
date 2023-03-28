@@ -1,11 +1,56 @@
-const carousel = document.querySelector(".carousel");
+var carousel = document.querySelector(".carousel");
 firstImg = carousel.querySelectorAll("div")[0];
 component = document.querySelector(".component");
 arrow = document.querySelectorAll(".component i");
 list = carousel.querySelectorAll("div");
-
 let isDragStart = false, prevPageX, prevScrollLeft, positionDiff;
-let firstImgWidth = component.clientWidth + component.clientWidth * 0.005;
+let firstImgWidth = component.clientWidth + component.clientWidth * 0.006;
+
+progressBar = document.getElementById("bar");
+totalSeconds = 1;
+maxTime = 200
+
+
+// var slides = new Slides(".carousel", {
+//   loopedSlides: 4,
+//   loop: true,
+//   slidesPerView: "auto",
+//   freeMode: true,
+//   mousewheel: {
+//     releaseOnEdges: true,
+//   },
+// });
+
+setInterval(setProgress, 10);
+function setProgress() {
+  if (totalSeconds >= maxTime){
+    totalSeconds = 0;
+    percentage = 0;
+    if (carousel.scrollLeft < component.offsetWidth*3){
+      autoForward();
+    } else {
+      autoBackward();
+    }
+  } 
+  else if (totalSeconds <= maxTime){
+    ++totalSeconds
+    percentage = ((totalSeconds / maxTime) * 100) ;
+    progressBar.style.width = percentage + '%';
+  }
+  else {
+    alert ("error with progressbar");
+  } 
+}
+
+function autoForward () {
+  carousel.scrollLeft += firstImgWidth;
+  setTimeout(colorChange, 500);
+}
+
+function autoBackward () {
+  carousel.scrollLeft += -firstImgWidth*4;
+  setTimeout(colorChange, 700);
+}
 
 arrow.forEach(icon => {
   icon.addEventListener("click", () => {
@@ -63,7 +108,7 @@ function colorChange () {
   for (let i = 0; i < lengthArray; i++){
     if (isInViewport(carousel.querySelectorAll("div")[i]) == true) {
       // console.log("Go to positive (left)");
-      document.getElementsByTagName("body")[0].style.backgroundColor = carousel.querySelectorAll("div")[i].style.background;
+      document.getElementsByTagName("body")[0].style.backgroundColor = carousel.querySelectorAll("div")[i].style.color;
       return;
     }
     else {
