@@ -4,10 +4,15 @@ component = document.querySelector(".component");
 arrow = document.querySelectorAll(".component i");
 list = carousel.querySelectorAll("div");
 let isDragStart = false, prevPageX, prevScrollLeft, positionDiff;
-let firstImgWidth = component.offsetWidth * 1.005;
+let firstImgWidth = component.clientWidth;
 
 function start() {
   colorChange()
+  console.log(firstImg.offsetWidth);
+  console.log(component.clientWidth);
+  console.log(firstImgWidth);
+  console.log(firstImgWidth*(list.length-1));
+  console.log(carousel.scrollLeft);
 }
 start()
 
@@ -19,7 +24,7 @@ function updateCarousel () {
 
 window.onresize = function(update) {
   carousel.scrollLeft = updateCarousel();
-  firstImgWidth = component.offsetWidth*1.005;
+  firstImgWidth = component.clientWidth;
   setTimeout(colorChange, 1000);
   totalSeconds = 0;
 };
@@ -27,13 +32,14 @@ window.onresize = function(update) {
 progressBar = document.getElementById("bar");
 setInterval(setProgress, 10);
 totalSeconds = 0;
-maxTime = 500
+maxTime = 300
 
 function setProgress() {
+  console.log(carousel.scrollLeft);
   if (totalSeconds >= maxTime){
     totalSeconds = 0;
     percentage = 0;
-    if (carousel.scrollLeft < firstImgWidth*2){
+    if (carousel.scrollLeft <= (firstImg.clientWidth*(list.length-1))){
       autoForward();
     } else {
       autoBackward();
@@ -50,19 +56,19 @@ function setProgress() {
 }
 
 function autoForward () {
-  carousel.scrollLeft += firstImgWidth;
-  setTimeout(colorChange, 500);
+  carousel.scrollLeft += firstImgWidth*1.00005;
+  setTimeout(colorChange, 1000);
 }
 
 function autoBackward () {
-  carousel.scrollLeft += -firstImgWidth*4;
-  setTimeout(colorChange, 600);
+  carousel.scrollLeft = 0;
+  setTimeout(colorChange, 250*(list.length));
 }
 
 arrow.forEach(icon => {
   icon.addEventListener("click", () => {
       carousel.scrollLeft += icon.id == "left" ? -firstImgWidth : firstImgWidth;
-      setTimeout(colorChange, 500);
+      setTimeout(colorChange, 1000);
   })
 });
 
@@ -71,9 +77,8 @@ function isInViewport(el) {
   return (
       rect.top >= 0 &&
       rect.left >= 0 &&
-      rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
-      rect.right <= (window.innerWidth || document.documentElement.clientWidth)
-
+      rect.bottom <= (document.documentElement.clientHeight) &&
+      rect.right <= (document.documentElement.clientWidth)
   );
 }
 
@@ -131,7 +136,7 @@ carousel.addEventListener("mouseup", dragStop);
 carousel.addEventListener("touchend", dragStop);
 
 function currentItem () {
-  
+
 }
 
 function changeProgressPosition () {
