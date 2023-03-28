@@ -16,7 +16,7 @@ function update(){
   time = 300*(list.length);
   setTimeout(colorChange, time);
   setTimeout(currentItem, time);
-  // setTimeout(changeProgressPosition, time)
+  setTimeout(changeProgressPosition, time)
 }
 
 function updateCarousel () {
@@ -158,11 +158,11 @@ function currentItem () {
 function changeProgressPosition () {
   for (let i = 0; i < list.length; i++){
     if (isInViewport(carousel.querySelectorAll("div")[i]) == true){
-      progressbar = document.getElementById("progress");
-      bar = document.getElementById("bar");
-      currentItem = document.getElementsByClassName("is-current")[0];
-      var rect = currentItem.getBoundingClientRect();
-      console.log(rect);
+      progressbar = document.getElementsByClassName("progress")[0];
+      item = document.getElementsByClassName("is-current")[0];
+      var rect = item.getBoundingClientRect();
+      progressBar.style.left = (rect.x - rect.width) + "px";
+      console.log(progressBar);
     }
   }
 }

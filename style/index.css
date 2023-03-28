@@ -100,9 +100,7 @@ html {
   display: inline-block;
   bottom: 0px;
   overflow: hidden;
-  left:10%;
   /* 10 40 75 */
-  transform: scaleX(1.4);
 }
 
 .bar{
@@ -209,7 +207,7 @@ body {
   align-items: center;
   justify-content: center;
   display: flex;
-  height: 90vh;
+  height: 80vh;
   width: 95%;
   flex-shrink: 0;
   background: none;
