@@ -55,20 +55,47 @@
   }
 } */
 
-.progress{
-  width: 30%;
-  height: 10px;
-  position: relative;
-  background-color: rgb(211, 211, 211, 0.7);
-  border-radius: 30px;
+.progress-list{
   position: absolute;
-  top:80%;
+  width: 90%;
+  top:75%;
   left:50%;
   transform: translate(-50%, -50%);
+  color: rgb(0, 0, 0); 
+  padding: 0px;
+  margin: 0px;
+  list-style-type: none;
+  display:inline-flex;
+  font-family: sans-serif;
+  font-weight: bold;
+  color: #FFF;
+  padding-bottom: 10px;
+}
+
+.progress-list li{
+  font-size: 1.2rem;
+  margin: 0px 10%;
+  opacity: 60%;
+}
+
+.progress-list li.is-current{
+  opacity: 100%;
+}
+
+.progress{
+  width: 10%;
+  height: 7px;
+  background-color: rgb(211, 211, 211, 0.7);
+  /* border-radius: 30px; */
+  position: absolute;
+  display: block;
+  bottom: 0px;
+  overflow: hidden;
+  left:130px;
+  transform: translate(-50%) scaleX(1.4);
 }
 
 .bar{
-  border-radius: 30px;
   height: 100%;
   width: 10%;
   background-color: rgb(255,255,255);
@@ -109,7 +136,7 @@ body {
   align-items: center;
   justify-content: center;
   min-height: 100vh;
-  background-color:rgb(222, 222, 16);
+  background-color:rgb(251, 80, 18);
 }
 
 .component {

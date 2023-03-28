@@ -6,32 +6,28 @@ list = carousel.querySelectorAll("div");
 let isDragStart = false, prevPageX, prevScrollLeft, positionDiff;
 let firstImgWidth = component.offsetWidth * 1.005;
 
+function start() {
+  colorChange()
+}
+start()
+
 function updateCarousel () {
   scrollLeft = 0;
-  console.log(carousel.offsetWidth);
+  colorChange();
   return scrollLeft;
 }
 
 window.onresize = function(update) {
   carousel.scrollLeft = updateCarousel();
   firstImgWidth = component.offsetWidth*1.005;
+  setTimeout(colorChange, 1000);
+  totalSeconds = 0;
 };
 
 progressBar = document.getElementById("bar");
 setInterval(setProgress, 10);
 totalSeconds = 0;
 maxTime = 500
-
-
-// var slides = new Slides(".carousel", {
-//   loopedSlides: 4,
-//   loop: true,
-//   slidesPerView: "auto",
-//   freeMode: true,
-//   mousewheel: {
-//     releaseOnEdges: true,
-//   },
-// });
 
 function setProgress() {
   if (totalSeconds >= maxTime){
@@ -133,3 +129,12 @@ carousel.addEventListener("mousemove", dragging);
 carousel.addEventListener("touchmove", dragging);
 carousel.addEventListener("mouseup", dragStop);
 carousel.addEventListener("touchend", dragStop);
+
+function currentItem () {
+  
+}
+
+function changeProgressPosition () {
+
+}
+
