@@ -44,6 +44,40 @@
 }
 
 @media screen and (max-width: 900px){
+  .menu{
+    display: block;
+  }
+  .menu.active .nav-bar:nth-child(2){
+    opacity: 0%;
+  }
+  .menu.active .nav-bar:nth-child(1){
+    transform: translateY(8px) rotate(45deg);
+  }
+  .menu.active .nav-bar:nth-child(3){
+    transform: translateY(-8px) rotate(-45deg);
+  }
+
+  .nav-menu{
+    position: fixed;
+    /* left: -1000%; */
+    top: -5000px;
+    gap:0;
+    flex-direction: column;
+    background-color: #262626;
+    width: 100%;
+    text-align: center;
+    transition: 0.3s;
+  }
+
+  .nav-item{
+    margin: 16px 0;
+  }
+
+  .nav-menu.active{
+    left: 0 ;
+    top: 50px;
+  }
+  
   .component{
     width: calc(100%/3);
   }
@@ -57,6 +91,17 @@
 
 html {
   scroll-behavior: smooth;
+}
+
+header {
+  background-color: #1f1f1f;
+  position: fixed;
+  top: 0px;
+  width: 100vw;
+  justify-content: space-between;
+  align-items: center;
+  display: flex;
+  z-index: 2;
 }
 
 .progress-list{
@@ -115,23 +160,59 @@ html {
 }
 
 .menu{
-  background: none;
   color: rgb(255, 255, 255);
-  top: 5%;
-  right: 5%;
+  cursor: pointer;
   position: absolute;
-  font-size: 3rem;
-  border: none;
+  right: 5%;
 }
 
-.menu.active{
-  background: none;
-  border-radius: 50%;
-  height: 46px;
-  width: 46px;
-  text-align: center;
-  line-height: 46px;
+.navbar{
+  min-height: 70px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 auto;
+  margin-left: 3vw;
 }
+
+.nav-menu{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: calc(2px + 1.1vw);
+}
+
+.nav-brand{
+  font-size: 2rem;
+}
+
+.nav-link{
+  transition: 0.7s ease;
+}
+
+.nav-link:hover{
+  color:dodgerblue;
+}
+
+.nav-menu li{
+  list-style: none;
+}
+
+.nav-menu {
+  color: #FFF;
+  text-decoration: none;
+}
+
+.nav-bar{
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  background-color: white;
+}
+
 
 body {
   -webkit-transition: background-color 1s ease-out;
@@ -149,7 +230,7 @@ body {
 
 .component {
   display: flex;
-  position: absolute;
+  position: relative;
   margin: 0px;
   padding: 0px;
   width: 90vw;

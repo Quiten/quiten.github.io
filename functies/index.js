@@ -8,7 +8,8 @@ let isDragStart = false, prevPageX, prevScrollLeft, positionDiff;
 let firstImgWidth = component.clientWidth;
 
 function start() {
-  colorChange()
+  colorChange();
+  changeProgressPosition();
 }
 start()
 
@@ -125,6 +126,7 @@ const dragging = (e) => {
 }
 
 const dragStop = () => {
+  totalSeconds = 0;
   carousel.classList.remove("dragging");
   isDragStart = false;
   autoSlide();
@@ -166,6 +168,13 @@ function changeProgressPosition () {
   }
 }
 
+
+document.getElementById("hamburger").addEventListener("click", function() {
+  menu = document.getElementById("hamburger");
+  navMenu = document.querySelector(".nav-menu");
+  menu.classList.toggle("active");
+  navMenu.classList.toggle("active");
+})
 
 carousel.addEventListener("mousedown", dragStart);
 carousel.addEventListener("touchstart", dragStart);
