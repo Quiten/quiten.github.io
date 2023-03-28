@@ -55,6 +55,10 @@
   }
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 .progress-list{
   position: absolute;
   width: 90%;
@@ -76,11 +80,15 @@
   font-size: calc(8px + 1.1vw);
   margin: 0px 10%;
   opacity: 60%;
+  -webkit-transition: opacity 1s ease-in-out;
+  -moz-transition: opacity 1s ease-in-out;
+  -ms-transition: opacity 1s ease-in-out;
+  -o-transition: opacity 1s ease-in-out;
+  transition: opacity 1s ease-in-out;
 }
 
 .progress-list li.is-current{
   opacity: 100%;
-  transition: cubic-bezier(0.5, 0.7, 1, 0.1);
 }
 
 .progress{

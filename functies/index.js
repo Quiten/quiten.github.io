@@ -2,23 +2,21 @@ var carousel = document.querySelector(".carousel");
 firstImg = carousel.querySelectorAll("div")[0];
 component = document.querySelector(".component");
 arrow = document.querySelectorAll(".component i");
+items = document.querySelectorAll(".progress-list li");
 list = carousel.querySelectorAll("div");
 let isDragStart = false, prevPageX, prevScrollLeft, positionDiff;
 let firstImgWidth = component.clientWidth;
 
 function start() {
   colorChange()
-  console.log(firstImg.offsetWidth);
-  console.log(component.clientWidth);
-  console.log(firstImgWidth);
-  console.log(firstImgWidth*(list.length-1));
-  console.log(carousel.scrollLeft);
 }
 start()
 
 function update(){
-  setTimeout(colorChange, 800);
-  setTimeout(currentItem, 800);
+  time = 300*(list.length);
+  setTimeout(colorChange, time);
+  setTimeout(currentItem, time);
+  // setTimeout(changeProgressPosition, time)
 }
 
 function updateCarousel () {
@@ -37,10 +35,9 @@ window.onresize = function() {
 progressBar = document.getElementById("bar");
 setInterval(setProgress, 10);
 totalSeconds = 0;
-maxTime = 300
+maxTime = 500
 
 function setProgress() {
-  console.log(carousel.scrollLeft);
   if (totalSeconds >= maxTime){
     totalSeconds = 0;
     percentage = 0;
@@ -67,8 +64,7 @@ function autoForward () {
 
 function autoBackward () {
   carousel.scrollLeft = 0;
-  setTimeout(colorChange, 250*(list.length));
-  setTimeout(currentItem, 1000)
+  update()
 }
 
 arrow.forEach(icon => {
@@ -77,6 +73,22 @@ arrow.forEach(icon => {
       update();
   })
 });
+
+items.forEach(item => {
+  item.addEventListener("click", () => {
+    for (let i = 0; i < list.length; i++){
+      card = document.querySelector("[data-th=" + CSS.escape(item.dataset.th) + "]");
+    }
+    scrolling = card.offsetLeft;
+    carousel.scrollTo({
+      top: 0, 
+      left: scrolling,
+      behavior: 'smooth'
+    });
+    totalSeconds = 0;
+    update();
+  })
+})
 
 function isInViewport(el) {
   const rect = el.getBoundingClientRect();
@@ -121,10 +133,8 @@ const dragStop = () => {
 
 function colorChange () {
   lengthArray = list.length;
-  // console.log(diff);
   for (let i = 0; i < lengthArray; i++){
     if (isInViewport(carousel.querySelectorAll("div")[i]) == true) {
-      // console.log("Go to positive (left)");
       document.getElementsByTagName("body")[0].style.backgroundColor = carousel.querySelectorAll("div")[i].style.color;
       return;
     }
@@ -152,7 +162,7 @@ function changeProgressPosition () {
       bar = document.getElementById("bar");
       currentItem = document.getElementsByClassName("is-current")[0];
       var rect = currentItem.getBoundingClientRect();
-      
+      console.log(rect);
     }
   }
 }
