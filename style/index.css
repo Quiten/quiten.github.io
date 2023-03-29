@@ -120,6 +120,7 @@ header {
 }
 
 .progress-list{
+  z-index: 4;
   position: absolute;
   width: 90%;
   bottom:10%;
@@ -134,8 +135,13 @@ header {
   padding-bottom: 10px;
 }
 
+.progress-list.disable{
+  left: -10000px;
+  position: fixed;
+}
+
 .progress-list li{
-  
+  z-index: 4;
   font-size: calc(8px + 1.1vw);
   margin: 0px 10%;
   opacity: 60%;
@@ -151,15 +157,14 @@ header {
 }
 
 .progress{
+  z-index: 4;
   transform: translate(0%, -50%);
   width: 10%;
   height: 7px;
   background-color: rgb(211, 211, 211, 0.7);
-  /* border-radius: 30px; */
   position:absolute;
   bottom: 0px;
   overflow: hidden;
-  /* 10 40 75 */
 }
 
 .bar{
@@ -308,7 +313,16 @@ body {
   width: 95%;
   flex-shrink: 0;
   background: none;
+  z-index: 1;
   /* border:1px solid black; */
+  position: relative;
+}
+
+.carousel div.active{
+  position: 'fixed';
+  z-index: 3;
+  width: 30vw;
+  height: 40vh;
 }
 
 .carousel div:not(:first-child){
@@ -324,8 +338,12 @@ body {
 }
 
 .AboutPage{
+  background-color: rgba(255, 140, 0, 0);
   position: fixed;
   opacity: 0%;
+  margin: auto;
+  width: auto;
+  height: auto;
   -webkit-transition: all 0.1s ease-out;
   transition: all 0.1s ease-out;
   z-index: -1;
@@ -333,7 +351,7 @@ body {
 
 .AboutPage.off {
   opacity: 100;
-  background-color: darkorange;
+  background-color: rgb(255, 217, 0);
   position: fixed;
   margin: 5%;
   width: 100vw;

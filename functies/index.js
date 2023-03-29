@@ -10,6 +10,8 @@ let firstImgWidth = component.clientWidth;
 function start() {
   colorChange();
   changeProgressPosition();
+  timer = true;
+  dragBlock = false;
 }
 start()
 
@@ -39,6 +41,9 @@ totalSeconds = 0;
 maxTime = 600
 
 function setProgress() {
+  if (timer != true){
+    return 0;
+  }
   if (totalSeconds >= maxTime){
     totalSeconds = 0;
     percentage = 0;
@@ -184,22 +189,26 @@ document.getElementById("AboutImg").addEventListener("click", function() {
   AboutMe.classList.toggle("off");
 })
 
-list.forEach(slide => {
-  slide.addEventListener("click", () => {
-    console.log(slide);
-    slide.style.backgroundColor = slide.style.color;
-    slide.style.position = 'fixed';
-    slide.style.zIndex = "3";
-    slide.style.top = -100 + 'px';
-    slide.style.left = 0 + 'px';
-    slide.style.margin = 0 + 'px';
-  })
-})
+// list.forEach(slide => {
+//   slide.addEventListener("click", () => {
+//     slide.classList.toggle("active");
+//     if (slide.classList.contains("active")){
+//       slide.style.backgroundColor = slide.style.color;
+//     } else {slide.style.backgroundColor = 'rgba(255, 140, 0, 0)'}
+//     itemList = document.querySelector(".progress-list");
+//     itemList.classList.toggle("disable");
+//     totalSeconds = 0;
+//     timer = !timer;
+//     dragBlock = !dragBlock;
+//     update();
+//   })
+// })
 
-carousel.addEventListener("mousedown", dragStart);
-carousel.addEventListener("touchstart", dragStart);
-carousel.addEventListener("mousemove", dragging);
-carousel.addEventListener("touchmove", dragging);
-carousel.addEventListener("mouseup", dragStop);
-carousel.addEventListener("touchend", dragStop);
-
+if (dragBlock == false){
+  carousel.addEventListener("mousedown", dragStart);
+  carousel.addEventListener("touchstart", dragStart);
+  carousel.addEventListener("mousemove", dragging);
+  carousel.addEventListener("touchmove", dragging);
+  carousel.addEventListener("mouseup", dragStop);
+  carousel.addEventListener("touchend", dragStop);
+}
