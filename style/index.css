@@ -46,7 +46,8 @@
   }
 
   .mainPage{
-    margin-left:6%;
+    left: 50%;
+    transform: translate(-40%);
   }
   
   .title{
@@ -63,13 +64,12 @@
 @media screen and (max-width: 900px){
 
   .mainPage{
-    margin-top: 14%;
+    translate: 0px 16%;
   }
 
   .title{
-    margin-top: 8%;
-    margin-bottom: 2%;
-    display: block;
+    translate: 0px 100%;
+    /* margin-bottom: 4%; */
     position: absolute;
     transform: translate(-50%, -50%);
     left: 50%;
@@ -149,10 +149,9 @@
 }
 
 html {
-  overflow-y: hidden;
+  overflow: hidden;
   font-weight: bold;
   font-family: sans-serif;
-  scroll-behavior: smooth;
   color: white;
 }
 
@@ -167,18 +166,9 @@ header {
   z-index: 5;
 }
 
-p {
-  margin-left: 20%;
-  margin-right: 20%;
-}
-
-.links {
-  
-}
-
 .title {
-  font-size: 3rem;
-  left: 50%;
+  font-size: calc(8px + 4vw);
+  left: 48%;
   color: white;
   font-weight: bold;
   display: inline;
@@ -270,7 +260,6 @@ p {
   height: 5vh;
   width: auto;
   filter: invert(78%) sepia(67%) saturate(2436%) hue-rotate(343deg) brightness(102%) contrast(105%);
-  overflow: hidden;
 }
 
 .nav-link{
@@ -306,7 +295,6 @@ body {
   -moz-transition: background-color 1s ease-out;
   -o-transition: background-color 1s ease-out;
   transition: background-color 1s ease-out;
-
   display: flex;
   padding: 0px;
   align-items: center;
@@ -334,7 +322,7 @@ body {
   line-height: 46px;
   background: #FFF;
   cursor: pointer;
-  font-size: 1.2rem;
+  font-size: calc(8px + 1.1vw);
   border-radius: 50%;
 }
 
@@ -421,7 +409,7 @@ body {
   width: auto;
   max-width: 20vw;
   height: auto;
-  max-height: 300px;
+  max-height: 30vh;
 }
 
 .AboutImage {
@@ -429,11 +417,10 @@ body {
   width: auto;
   max-width: 20vw;
   height: auto;
-  max-height: 300px;
+  max-height: 30vh;
 }
 
 .Page{
-  overflow: visible;
   background-color: rgba(255, 140, 0, 0);
   position: fixed;
   opacity: 0%;
@@ -445,10 +432,19 @@ body {
 }
 
 .mainPage{
-  top: 20%;
+  overflow: hidden;
+  position: absolute;
+  margin-top: 4%;
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+.project{
+  display: flex;
+  gap: 4%;
+  margin: 0px;
+  padding: 0px;
 }
 
 .AboutPage.off {
@@ -472,7 +468,11 @@ body {
 .empty {
   position: relative;
   width: 30vw;
-  max-width: 300px;
-  height: 26%;
+  max-width: 10vw;
+  height: 27vh;
 }
 
+#about {
+  margin-left: 20%;
+  margin-right: 20%;
+}
