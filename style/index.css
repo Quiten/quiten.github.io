@@ -163,7 +163,7 @@ header {
   justify-content: space-between;
   align-items: center;
   display: flex;
-  z-index: 5;
+  z-index: 7;
 }
 
 .title {
@@ -197,7 +197,7 @@ header {
 }
 
 .progress-list li{
-  z-index: 4;
+  z-index: 6;
   font-size: calc(8px + 1.1vw);
   margin: 0px 10%;
   opacity: 60%;
@@ -220,7 +220,6 @@ header {
   background-color: rgb(211, 211, 211, 0.7);
   position:absolute;
   bottom: 0px;
-  overflow: hidden; 
 }
 
 .bar{
@@ -348,7 +347,7 @@ body {
 
 .carousel.active{
   top: 70px;
-  z-index: 3;
+  z-index: 5;
   translate:0px -35vh;
 }
 
@@ -421,8 +420,9 @@ body {
 }
 
 .Page{
+  overflow: scroll;
   background-color: rgba(255, 140, 0, 0);
-  position: fixed;
+  position: absolute;
   opacity: 0%;
   margin-top: 70px;
   padding: 0px;
@@ -432,7 +432,6 @@ body {
 }
 
 .mainPage{
-  overflow: hidden;
   position: absolute;
   margin-top: 4%;
   display: flex;
@@ -450,19 +449,19 @@ body {
 .AboutPage.off {
   opacity: 100;
   background-color: rgb(252, 107, 54);
-  z-index: 1; 
+  z-index: 4; 
 }
 
 .ProjectenPage.off {
   opacity: 100;
   background-color: rgb(102, 52, 127);
-  z-index: 1; 
+  z-index: 4; 
 }
 
 .ContactPage.off {
   opacity: 100;
   background-color: #04c8c1;
-  z-index: 1; 
+  z-index: 4; 
 }
 
 .empty {
