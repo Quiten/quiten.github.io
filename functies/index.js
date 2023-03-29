@@ -176,6 +176,11 @@ document.getElementById("hamburger").addEventListener("click", function() {
   navMenu.classList.toggle("active");
 })
 
+document.getElementById("AboutImg").addEventListener("click", function() {
+  AboutMe = document.getElementById("AboutPage");
+  AboutMe.classList.toggle("off");
+})
+
 carousel.addEventListener("mousedown", dragStart);
 carousel.addEventListener("touchstart", dragStart);
 carousel.addEventListener("mousemove", dragging);

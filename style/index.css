@@ -62,7 +62,7 @@
     transition: all 0.3s ease-in-out;
     top: 0px;
     position: absolute;
-    left: 40%;
+    left: 50%;
     transform: translate(-50, -50%) ;
   }
 
@@ -99,6 +99,8 @@
 }
 
 html {
+  font-weight: bold;
+  font-family: sans-serif;
   scroll-behavior: smooth;
 }
 
@@ -124,13 +126,12 @@ header {
   margin: 0px;
   list-style-type: none;
   display:inline-flex;
-  font-family: sans-serif;
-  font-weight: bold;
   color: #FFF;
   padding-bottom: 10px;
 }
 
 .progress-list li{
+  
   font-size: calc(8px + 1.1vw);
   margin: 0px 10%;
   opacity: 60%;
@@ -315,4 +316,28 @@ body {
 
 .carousel div:last-child{
   margin-right: 5%;
+}
+
+.AboutImage {
+  filter: invert(88%) sepia(73%) saturate(7447%) hue-rotate(311deg) brightness(105%) contrast(92%);
+}
+
+.AboutPage{
+  position: fixed;
+  opacity: 0%;
+  -webkit-transition: all 0.1s ease-out;
+  transition: all 0.1s ease-out;
+  z-index: -1;
+}
+
+.AboutPage.off {
+  opacity: 100;
+  background-color: orange;
+  position: fixed;
+  margin: 5%;
+  border:1px solid black;
+  border-radius: 15px;
+  width: 90vw;
+  height: 80vh;
+  z-index: 3;
 }
