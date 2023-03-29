@@ -194,7 +194,15 @@ list.forEach(slide => {
     if (slide.classList.contains("active")){
       slide.style.backgroundColor = slide.style.color;
     } else {slide.style.backgroundColor = 'rgba(255, 140, 0, 0)'}
-    
+
+    for (let i = 0; i < list.length; i++) {
+      if (list[i].classList.contains("active") == false && carousel.classList.contains("active") == true){
+        list[i].classList.toggle("disable");
+      } else if (list[i].classList.contains("disable") == true && carousel.classList.contains("active") == false) {
+        list[i].classList.toggle("disable");
+      }
+    }
+
     itemList = document.querySelector(".progress-list");
     itemList.classList.toggle("disable");
     totalSeconds = 0;
@@ -204,6 +212,14 @@ list.forEach(slide => {
     update();
   })
 })
+
+function findIndex () {
+  for (let i = 0; i < list.length; i++){
+    if (isInViewport(carousel.querySelectorAll("div")[i]) == true) {
+      return i;
+    }
+  }
+}
 
 if (dragBlock == false){
   carousel.addEventListener("mousedown", dragStart);

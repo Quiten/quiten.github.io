@@ -338,6 +338,13 @@ body {
   height: 35vh;
 }
 
+.carousel div.disable{
+  width: 0px;
+  height: 0px;
+  z-index: -1;
+  position: fixed;
+}
+
 .carousel div:not(:first-child){
   margin-left: 5%;
 }
