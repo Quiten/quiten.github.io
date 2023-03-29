@@ -200,6 +200,7 @@ list.forEach(slide => {
         list[i].classList.toggle("disable");
       } else if (list[i].classList.contains("disable") == true && carousel.classList.contains("active") == false) {
         list[i].classList.toggle("disable");
+        carousel.scrollLeft = slide.offsetLeft;
       }
     }
 

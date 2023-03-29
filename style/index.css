@@ -37,9 +37,12 @@
   }
 }
 
-@media screen {
+@media screen and (min-width: 900px){
   .component{
     width: 70vw;
+  }
+  .menu{
+    top: -100%;
   }
 }
 
