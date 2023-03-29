@@ -168,6 +168,9 @@ function changeProgressPosition () {
   }
 }
 
+document.getElementById("nav-brandID").addEventListener("click", function() {
+  console.log("test");
+})
 
 document.getElementById("hamburger").addEventListener("click", function() {
   menu = document.getElementById("hamburger");
@@ -179,6 +182,18 @@ document.getElementById("hamburger").addEventListener("click", function() {
 document.getElementById("AboutImg").addEventListener("click", function() {
   AboutMe = document.getElementById("AboutPage");
   AboutMe.classList.toggle("off");
+})
+
+list.forEach(slide => {
+  slide.addEventListener("click", () => {
+    console.log(slide);
+    slide.style.backgroundColor = slide.style.color;
+    slide.style.position = 'fixed';
+    slide.style.zIndex = "3";
+    slide.style.top = -100 + 'px';
+    slide.style.left = 0 + 'px';
+    slide.style.margin = 0 + 'px';
+  })
 })
 
 carousel.addEventListener("mousedown", dragStart);

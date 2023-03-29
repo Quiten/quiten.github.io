@@ -60,9 +60,9 @@
   .nav-brand{
     -webkit-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out;
-    top: 0px;
+    top: 10px;
     position: absolute;
-    left: 50%;
+    left: 45%;
     transform: translate(-50, -50%) ;
   }
 
@@ -76,6 +76,7 @@
     width: 100%;
     text-align: center;
     transition: 0.3s;
+    padding: 0px;
   }
 
   .nav-item{
@@ -93,6 +94,9 @@
 } 
 
 @media screen and (max-width: 550px){
+  .nav-brand{
+    left: 40%;
+  }
   .component{
     width: calc(100%/2);
   }
@@ -112,14 +116,14 @@ header {
   justify-content: space-between;
   align-items: center;
   display: flex;
-  z-index: 4;
+  z-index: 5;
 }
 
 .progress-list{
   position: absolute;
   width: 90%;
   bottom:10%;
-  left: 0px;
+  left: 0%;
   text-align: center;
   color: rgb(0, 0, 0); 
   padding: 0px;
@@ -190,7 +194,7 @@ header {
   justify-content: space-between;
   align-items: center;
   gap: calc(2px + 1.1vw);
-  z-index:3;
+  z-index:4;
 }
 
 .nav-brand{
@@ -297,10 +301,6 @@ body {
 .carousel div{
   margin: 0px;
   padding: 0px;
-  -webkit-transition: background-color 2s ease-out;
-  -moz-transition: background-color 2s ease-out;
-  -o-transition: background-color 2s ease-out;
-  transition: background-color 2s ease-out;
   align-items: center;
   justify-content: center;
   display: flex;
@@ -333,12 +333,10 @@ body {
 
 .AboutPage.off {
   opacity: 100;
-  background-color: orange;
+  background-color: darkorange;
   position: fixed;
   margin: 5%;
-  border:1px solid black;
-  border-radius: 15px;
-  width: 90vw;
-  height: 80vh;
+  width: 100vw;
+  height: 100vh;
   z-index: 2;
 }
