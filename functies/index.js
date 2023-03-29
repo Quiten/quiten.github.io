@@ -191,11 +191,6 @@ list.forEach(slide => {
 
     carousel.classList.toggle("active");
     slide.classList.toggle("active");
-    if (slide.classList.contains("active")){
-      slide.style.backgroundColor = slide.style.color;
-    } else {
-      slide.style.backgroundColor = 'rgba(255, 140, 0, 0)';
-    }
 
     for (let i = 0; i < list.length; i++) {
       if (list[i].classList.contains("active") == false && carousel.classList.contains("active") == true){
@@ -205,6 +200,11 @@ list.forEach(slide => {
         // jump(slide.dataset.th+'Id');
         carousel.scrollLeft = slide.offsetLeft;
       }
+    }
+    if (slide.classList.contains("active")){
+      slide.style.backgroundColor = slide.style.color;
+    } else {
+      slide.style.backgroundColor = 'rgba(255, 140, 0, 0)';
     }
 
     itemList = document.querySelector(".progress-list");
@@ -222,13 +222,6 @@ function jump(h){
   history.replaceState(null,null,url);   //Don't like hashes. Changing it back.
 }
 
-function findIndex () {
-  for (let i = 0; i < list.length; i++){
-    if (isInViewport(carousel.querySelectorAll("div")[i]) == true) {
-      return i;
-    }
-  }
-}
 
 if (dragBlock == false){
   carousel.addEventListener("mousedown", dragStart);
