@@ -200,7 +200,7 @@ list.forEach(slide => {
         list[i].classList.toggle("disable");
       } else if (list[i].classList.contains("disable") == true && carousel.classList.contains("active") == false) {
         list[i].classList.toggle("disable");
-        carousel.scrollLeft = slide.offsetLeft;
+        jump(slide.dataset.th+'Id');
       }
     }
 
@@ -213,6 +213,12 @@ list.forEach(slide => {
     update();
   })
 })
+
+function jump(h){
+  var url = location.href;               //Save down the URL without hash.
+  location.href = "#"+h;                 //Go to the target element.
+  history.replaceState(null,null,url);   //Don't like hashes. Changing it back.
+}
 
 function findIndex () {
   for (let i = 0; i < list.length; i++){

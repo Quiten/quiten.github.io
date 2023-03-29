@@ -114,6 +114,7 @@ html {
   font-weight: bold;
   font-family: sans-serif;
   scroll-behavior: smooth;
+  color: white;
 }
 
 header {
@@ -125,6 +126,11 @@ header {
   align-items: center;
   display: flex;
   z-index: 5;
+}
+
+.title {
+  color: white;
+  font-weight: bold;
 }
 
 .progress-list{
@@ -337,16 +343,22 @@ body {
   position: relative;
   top: auto;
   left: auto;
+
+  transition: all 1s;
+  transition-timing-function: cubic-bezier(.02,.6,.63,1.02);
 }
 
 .carousel div.active{
   position: 'fixed';
   z-index: 3;
   width: 20vw;
+  max-width: 200px;
   height: 30vh;
 }
 
 .carousel div.disable{
+  margin-left: 0px;
+  margin-right: 0px;
   width: 0px;
   height: 0px;
   z-index: -1;
@@ -374,9 +386,18 @@ body {
   padding: 0px;
   width: auto;
   height: auto;
+  z-index: -1;
+  top: 70px;
+  padding-top: 3%;
   -webkit-transition: all 0.1s ease-out;
   transition: all 0.1s ease-out;
-  z-index: -1;
+}
+
+.Grid{
+  display: inline-grid;
+  grid-template-columns: 25% auto;
+  grid-template-rows: 30vh auto;
+  gap: 5%;
 }
 
 .AboutPage.off {
@@ -385,7 +406,7 @@ body {
   position: fixed;
   width: 100vw;
   height: 100vh;
-  z-index: 2; 
+  z-index: 1; 
 }
 
 .ProjectenPage.off {
@@ -394,7 +415,7 @@ body {
   position: fixed;
   width: 100vw;
   height: 100vh;
-  z-index: 2; 
+  z-index: 1; 
 }
 
 .ContactPage.off {
@@ -403,6 +424,12 @@ body {
   position: fixed;
   width: 100vw;
   height: 100vh;
-  z-index: 2; 
+  z-index: 1; 
+}
+
+.empty {
+  width: 10%;
+  grid-row-start: 1;
+  grid-row-end: 3;
 }
 

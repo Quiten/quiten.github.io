@@ -38,12 +38,13 @@
       <div class="carousel">
         <div class="slide" id="slide1" style="color: rgb(251, 80, 18)" draggable="false" data-th="About">
           <img class="AboutImage" id="AboutImg" src="website\Leeuw.png">
+          <a id="AboutId"></a>
         </div>
         <div class="slide" id="slide2" style="color: rgb(135, 117, 172)" draggable="false" data-th="Projecten">
-          
+          <a id="ProjectenId"></a>
         </div>
         <div class="slide" id="slide3" style="color: rgb(3, 143, 138)" draggable="false" data-th="Contact">
-          
+          <a id="ContactId"></a>
         </div>
       </div>
       <!-- <i id="right" class="buttonRight">&#62;</i> -->
@@ -58,8 +59,23 @@
         </ul>
       </div>
     </div>
-    <div class="Page AboutPage" id="AboutPage" data-th="About"></div>
-    <div class="Page ProjectenPage" id="ProjectenPage" data-th="Projecten"></div>
-    <div class="Page ContactPage" id="ContactPage" data-th="Contact"></div>
+    <div class="Grid Page AboutPage" id="AboutPage" data-th="About">
+      <div class="empty"></div>
+      <ul>
+        <h2 class="title">Ik ben Quinten</h2>
+        <img src="website\quinten.jpg">
+      </ul>
+      <div>
+        <p>
+          Hallo ik ben Quinten de Leeuw. 
+        </p>
+      </div>
+    </div>
+    <div class="Grid Page ProjectenPage" id="ProjectenPage" data-th="Projecten">
+      <div class="empty"></div>
+    </div>
+    <div class="Grid Page ContactPage" id="ContactPage" data-th="Contact">
+      <div class="empty"></div>
+    </div>
   </body>
 </html>
