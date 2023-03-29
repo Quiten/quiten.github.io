@@ -60,7 +60,8 @@
   .nav-brand{
     -webkit-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out;
-    top: 10px;
+    top: 4%;
+    bottom: 4%;
     position: absolute;
     left: 45%;
     transform: translate(-50, -50%) ;
@@ -164,7 +165,7 @@ header {
   background-color: rgb(211, 211, 211, 0.7);
   position:absolute;
   bottom: 0px;
-  overflow: hidden;
+  overflow: hidden; 
 }
 
 .bar{
@@ -247,7 +248,7 @@ body {
   transition: background-color 1s ease-out;
 
   display: flex;
-  padding: 0 10px;
+  padding: 0px;
   align-items: center;
   justify-content: center;
   min-height: 100vh;
@@ -260,7 +261,7 @@ body {
   margin: 0px;
   padding: 0px;
   width: 90vw;
-  top: 50px;
+  top: 0px;
 }
 
 .component i{
@@ -293,7 +294,8 @@ body {
   scroll-behavior: smooth;
   scroll-snap-type: x mandatory;
   width: 100%;
-  position: inherit;
+  position: relative;
+  top: 5%;
 }
 
 .carousel.active{
