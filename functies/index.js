@@ -186,7 +186,7 @@ document.getElementById("hamburger").addEventListener("click", function() {
 
 list.forEach(slide => {
   slide.addEventListener("click", () => {
-    AboutMe = document.getElementById("AboutPage");
+    AboutMe = document.getElementById(slide.dataset.th+'Page');
     AboutMe.classList.toggle("off");
 
     carousel.classList.toggle("active");
@@ -205,8 +205,8 @@ list.forEach(slide => {
 
     itemList = document.querySelector(".progress-list");
     itemList.classList.toggle("disable");
-    totalSeconds = 0;
     
+    totalSeconds = 0;
     timer = !timer;
     dragBlock = !dragBlock;
     update();

@@ -44,15 +44,19 @@
 }
 
 @media screen and (max-width: 900px){
+
   .menu{
     display: block;
   }
+
   .menu.active .nav-bar:nth-child(2){
     opacity: 0%;
   }
+
   .menu.active .nav-bar:nth-child(1){
     transform: translateY(8px) rotate(45deg);
   }
+
   .menu.active .nav-bar:nth-child(3){
     transform: translateY(-8px) rotate(-45deg);
   }
@@ -137,7 +141,7 @@ header {
 }
 
 .progress-list.disable{
-  left: -10000px;
+  left: -100%;
   position: fixed;
 }
 
@@ -185,6 +189,7 @@ img{
   cursor: pointer;
   position: absolute;
   right: 5%;
+  /* right: -100%; */
 }
 
 .navbar{
@@ -343,6 +348,7 @@ body {
   height: 0px;
   z-index: -1;
   position: fixed;
+  left: -100%;
 }
 
 .carousel div:not(:first-child){
