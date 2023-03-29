@@ -333,7 +333,7 @@ body {
   flex-shrink: 0;
   background: none;
   z-index: 1;
-  border:1px solid black;
+  /* border:1px solid black; */
   position: relative;
   top: auto;
   left: auto;
@@ -343,7 +343,7 @@ body {
   position: 'fixed';
   z-index: 3;
   width: 20vw;
-  height: 35vh;
+  height: 30vh;
 }
 
 .carousel div.disable{
@@ -366,7 +366,7 @@ body {
   filter: invert(88%) sepia(73%) saturate(7447%) hue-rotate(311deg) brightness(105%) contrast(92%);
 }
 
-.AboutPage{
+.Page{
   background-color: rgba(255, 140, 0, 0);
   position: fixed;
   opacity: 0%;
@@ -387,3 +387,22 @@ body {
   height: 100vh;
   z-index: 2; 
 }
+
+.ProjectenPage.off {
+  opacity: 100;
+  background-color: rgb(102, 52, 127);
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  z-index: 2; 
+}
+
+.ContactPage.off {
+  opacity: 100;
+  background-color: #04c8c1;
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  z-index: 2; 
+}
+
