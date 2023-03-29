@@ -146,7 +146,7 @@ function colorChange () {
       return;
     }
     else {
-      document.getElementsByTagName("body")[0].style.backgroundColor = "#343F4F";
+      // document.getElementsByTagName("body")[0].style.backgroundColor = "#343F4F";
     }
   }
 }
@@ -193,7 +193,9 @@ list.forEach(slide => {
     slide.classList.toggle("active");
     if (slide.classList.contains("active")){
       slide.style.backgroundColor = slide.style.color;
-    } else {slide.style.backgroundColor = 'rgba(255, 140, 0, 0)'}
+    } else {
+      slide.style.backgroundColor = 'rgba(255, 140, 0, 0)';
+    }
 
     for (let i = 0; i < list.length; i++) {
       if (list[i].classList.contains("active") == false && carousel.classList.contains("active") == true){
@@ -210,7 +212,6 @@ list.forEach(slide => {
     totalSeconds = 0;
     timer = !timer;
     dragBlock = !dragBlock;
-    update();
   })
 })
 
