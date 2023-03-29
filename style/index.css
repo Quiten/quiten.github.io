@@ -292,6 +292,14 @@ body {
   scroll-behavior: smooth;
   scroll-snap-type: x mandatory;
   width: 100%;
+  position: inherit;
+}
+
+.carousel.active{
+  position: fixed;
+  top: 70px;
+  left: 4%;
+  z-index: 3;
 }
 
 .carousel.dragging{
@@ -316,13 +324,15 @@ body {
   z-index: 1;
   /* border:1px solid black; */
   position: relative;
+  top: auto;
+  left: auto;
 }
 
 .carousel div.active{
   position: 'fixed';
   z-index: 3;
-  width: 30vw;
-  height: 40vh;
+  width: 20vw;
+  height: 35vh;
 }
 
 .carousel div:not(:first-child){
@@ -341,7 +351,8 @@ body {
   background-color: rgba(255, 140, 0, 0);
   position: fixed;
   opacity: 0%;
-  margin: auto;
+  margin: 0px;
+  padding: 0px;
   width: auto;
   height: auto;
   -webkit-transition: all 0.1s ease-out;
@@ -351,10 +362,9 @@ body {
 
 .AboutPage.off {
   opacity: 100;
-  background-color: rgb(255, 217, 0);
+  background-color: rgb(252, 107, 54);
   position: fixed;
-  margin: 5%;
   width: 100vw;
   height: 100vh;
-  z-index: 2;
+  z-index: 2; 
 }

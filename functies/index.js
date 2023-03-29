@@ -184,25 +184,26 @@ document.getElementById("hamburger").addEventListener("click", function() {
   navMenu.classList.toggle("active");
 })
 
-document.getElementById("AboutImg").addEventListener("click", function() {
-  AboutMe = document.getElementById("AboutPage");
-  AboutMe.classList.toggle("off");
-})
+list.forEach(slide => {
+  slide.addEventListener("click", () => {
+    AboutMe = document.getElementById("AboutPage");
+    AboutMe.classList.toggle("off");
 
-// list.forEach(slide => {
-//   slide.addEventListener("click", () => {
-//     slide.classList.toggle("active");
-//     if (slide.classList.contains("active")){
-//       slide.style.backgroundColor = slide.style.color;
-//     } else {slide.style.backgroundColor = 'rgba(255, 140, 0, 0)'}
-//     itemList = document.querySelector(".progress-list");
-//     itemList.classList.toggle("disable");
-//     totalSeconds = 0;
-//     timer = !timer;
-//     dragBlock = !dragBlock;
-//     update();
-//   })
-// })
+    carousel.classList.toggle("active");
+    slide.classList.toggle("active");
+    if (slide.classList.contains("active")){
+      slide.style.backgroundColor = slide.style.color;
+    } else {slide.style.backgroundColor = 'rgba(255, 140, 0, 0)'}
+    
+    itemList = document.querySelector(".progress-list");
+    itemList.classList.toggle("disable");
+    totalSeconds = 0;
+    
+    timer = !timer;
+    dragBlock = !dragBlock;
+    update();
+  })
+})
 
 if (dragBlock == false){
   carousel.addEventListener("mousedown", dragStart);
