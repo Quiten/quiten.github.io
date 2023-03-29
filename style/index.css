@@ -112,7 +112,7 @@ header {
   justify-content: space-between;
   align-items: center;
   display: flex;
-  z-index: 2;
+  z-index: 4;
 }
 
 .progress-list{
@@ -190,6 +190,7 @@ header {
   justify-content: space-between;
   align-items: center;
   gap: calc(2px + 1.1vw);
+  z-index:3;
 }
 
 .nav-brand{
@@ -339,5 +340,5 @@ body {
   border-radius: 15px;
   width: 90vw;
   height: 80vh;
-  z-index: 3;
+  z-index: 2;
 }
