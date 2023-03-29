@@ -173,8 +173,9 @@ header {
   background-color: rgb(255,255,255);
 }
 
-.img{
-  width: 100%;
+img{
+  width: auto;
+  max-width: 20vw;
   height: auto;
 }
 
