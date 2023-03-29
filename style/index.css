@@ -323,7 +323,7 @@ body {
   flex-shrink: 0;
   background: none;
   z-index: 1;
-  /* border:1px solid black; */
+  border:1px solid black;
   position: relative;
   top: auto;
   left: auto;
