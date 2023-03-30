@@ -554,7 +554,7 @@ body {
   padding: 20px;
   background: #fff;
   border-radius: 5px;
-  width: 30%;
+  width: 50vw;
   position: relative;
   transition: all 5s ease-in-out;
 }
