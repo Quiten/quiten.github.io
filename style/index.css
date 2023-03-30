@@ -49,6 +49,10 @@
 }
 
 @media screen and (max-width: 900px){
+  .flexRow {
+    background-color: #5a487e;
+  }
+
   .mainPage{
     translate: 0px 20%;
   }
@@ -478,7 +482,7 @@ body {
 }
 
 .project img{
-  min-width: 20vw;
+  min-width: 100px;
   height: auto;
 }
 
