@@ -39,7 +39,7 @@
     <div class="component">
       <!-- <i id="left" class="buttonLeft">&#60;</i> -->
       <div class="carousel">
-        <div class="slide" id="slide1" style="color: rgb(251, 80, 18)" draggable="false" data-th="About">
+        <div class="slide" id="slide1" style="color: #FF751F" draggable="false" data-th="About">
           <img class="AboutImage" id="AboutImg" src="website\Leeuw.png">
         </div>
         <div class="slide" id="slide2" style="color: rgb(135, 117, 172)" draggable="false" data-th="Projecten">
@@ -65,12 +65,12 @@
       <div class="empty"></div>
       <h2 class="title">About</h2>
       <div class="mainPage">
-        <img class="image" src="website\quinten.jpg">
         <div>
           <p id="about">Hallo ik ben Quinten de Leeuw, 18 jaar oud, Nederlands en positief. </p>
           <p id="about">Ik volg de Coderclass en maak voor een portfolio opdracht deze website. 
             De website is gemaakt met HTML, CSS en Javascript. Bij de Coderclass heb ik ook met Blender, unity, Python, C++, Dart en Flutter gewerkt.</p>
         </div>
+        <img class="image" src="website\quinten.jpg">
       </div>
       <div class="empty"></div>
     </div>
@@ -78,11 +78,16 @@
       <div class="empty"></div>
       <h2 class="title">Projecten</h2>
       <div class="mainPage Project">
+        <div>
+          <p>Hier staan wat projecten waaraan ik heb gewerkt.</p>
+        </div>
         <div class="flexRow">
           <div>
             <h2>AI learns to Drive</h2>
             <div class="project">
-              <img class="image Contact"src="website\projects\Screenshot 2022-09-27 at 01.04.46.png">
+              <a href="#popup1">
+                <img class="image Contact"src="website\projects\Screenshot 2022-09-27 at 01.04.46.png">
+              </a>
             </div>
           </div>
           <div>
@@ -112,7 +117,7 @@
     <div class="Grid Page ContactPage" id="ContactPage" data-th="Contact">
       <div class="empty"></div>
       <h2 class="title Contact">Contact</h2>
-      <div class="mainPage Contact main" id="contactPage">
+      <div class="mainPage Contact" id="contactPage">
         <div>
           <p>Ik ben bereikbaar via deze platformen.</p>
         </div>
@@ -145,6 +150,34 @@
         </div>
       </div>
       <div class="emptyEnd"></div>
+    </div>
+    <div id="popup1" class="overlay">
+      <div class="popup">
+        <h2>AI learns to Drive</h2>
+        <a class="close" href="#">&times;</a>
+        <p class="content">Bij AI learns to Drive heb ik met Javascript en p5 auto gemaakt. Waren onderdeel van een Neural Network.</p>
+      </div>
+    </div>
+    <div id="popup2" class="overlay">
+      <div class="popup">
+        <h2>VU Security</h2>
+        <a class="close" href="#">&times;</a>
+        <p class="content">Hierbij heb ik een lessenreeks gevolgd en opdrachten gemaakt gegeven door de VU. </p>
+      </div>
+    </div>
+    <div id="popup3" class="overlay">
+      <div class="popup">
+        <h2>Brandnetel App</h2>
+        <a class="close" href="#">&times;</a>
+        <p class="content">Hier heb ik een AI met flutter geprogrammeerd. Op de app brandnetels te laten herkennen heb ik ook een AI getrained met Tensorflow en het model omgezet naar TensorflowLite om het in de app te krijgen.</p>
+      </div>
+    </div>
+    <div id="popup4" class="overlay">
+      <div class="popup">
+        <h2>Python Dictionary</h2>
+        <a class="close" href="#">&times;</a>
+        <p class="content">Hierbij heb ik met Python een dictionary geprogrammeerd die je ook nog kan overhoren.</p>
+      </div>
     </div>
   </body>
 </html>

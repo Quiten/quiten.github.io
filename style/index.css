@@ -32,7 +32,7 @@
   }
 
   .title.Contact {
-    top: 20%;
+    top: 15%;
     position: absolute;
   }
 
@@ -78,6 +78,7 @@
   }
 
   .carousel div.active{
+    position: relative;
     height: 16%;
     left: 46%;
     top: 90px;
@@ -351,6 +352,8 @@ body {
   top: 70px;
   z-index: 5;
   translate:0px -35vh;
+  width: 20%;
+  padding-left: 5%;
 }
 
 .carousel.dragging{
@@ -381,7 +384,7 @@ body {
 
 .carousel div.active{
   z-index: 3;
-  width: 20%;
+  width: 100%;
   min-width: 120px;
   min-height: 100px;
   height: 30vh;
@@ -461,13 +464,13 @@ body {
 
 .AboutPage.off {
   opacity: 100;
-  background-color: rgb(252, 107, 54);
+  background-color: #ff8b42;
   z-index: 4; 
 }
 
 .ProjectenPage.off {
   opacity: 100;
-  background-color: rgb(102, 52, 127);
+  background-color: #705D96;
   z-index: 4; 
 }
 
@@ -529,3 +532,49 @@ body {
 }
 
 
+.overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.7);
+  transition: opacity 500ms;
+  visibility: hidden;
+  opacity: 0;
+  z-index: 7;
+}
+.overlay:target {
+  visibility: visible;
+  opacity: 1;
+}
+.popup {
+  top: 10%;
+  margin: 70px auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 5px;
+  width: 30%;
+  position: relative;
+  transition: all 5s ease-in-out;
+}
+.popup h2 {
+  margin-top: 0;
+  color: #333;
+  font-family: Tahoma, Arial, sans-serif;
+}
+.popup .close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  transition: all 200ms;
+  font-size: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #333;
+}
+.popup .content {
+  max-height: 30%;
+  overflow: auto;
+  color: black;
+}
