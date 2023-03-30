@@ -195,6 +195,7 @@ function GoToPage(slide) {
     for (let i = 0; i < list.length; i++) {
       if (list[i].classList.contains("active") == false && carousel.classList.contains("active") == true){
         list[i].classList.toggle("disable");
+        carousel.scrollLeft = 0;
       } else if (list[i].classList.contains("disable") == true && carousel.classList.contains("active") == false) {
         list[i].classList.toggle("disable");
         // jump(slide.dataset.th+'Id');
