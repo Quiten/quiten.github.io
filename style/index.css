@@ -455,6 +455,10 @@ body {
   border-radius: 7px;
 }
 
+.mainPage.About {
+  top: calc(30vh);
+}
+
 .project{
   display: flex;
   gap: 4%;
