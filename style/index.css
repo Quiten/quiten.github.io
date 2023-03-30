@@ -461,12 +461,25 @@ body {
   border-radius: 7px;
 }
 
+.projectBox {
+  border: 2px solid none;
+  /* border-radius: 6px; */
+  background-color: #5a487e;
+  padding-left: 2%;
+  padding-right: 2%;
+}
+
 .project{
   display: flex;
   gap: 4%;
   margin: 0px;
   padding: 0px;
   width: 30%;
+}
+
+.project img{
+  min-width: 20vw;
+  height: auto;
 }
 
 .AboutPage.off {
