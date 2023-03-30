@@ -228,6 +228,7 @@ navMenu.forEach(link => {
       if (list[i].classList.contains("active")){
         if (slide == list[i]){
           GoToPage(slide);
+          update();
           return 0;
         } else {
           GoToPage(list[i]);
