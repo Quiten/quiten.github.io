@@ -25,7 +25,7 @@
     left: 50%;
     transform: translate(-50%, -50%);
   }
-  
+
   .title{
     top: 10%;
     position: absolute;
@@ -43,11 +43,12 @@
 }
 
 @media screen and (max-width: 900px){
-  .flexDiv{
-    flex-direction: column;
-  }
   .mainPage{
     translate: 0px 20%;
+  }
+    
+  .mainPage.Contact{
+    right: 20%;
   }
 
   .mainPage.Project {
@@ -524,13 +525,33 @@ body {
   z-index: 6;
 }
 
+.ion-icons.youtube{
+  color: red;
+}
+
+.ion-icons.twitter{
+  color: lightblue;
+}
+
+.ion-icons.linkedin{
+  color: blue;
+}
+
+.ion-icons.reddit{
+  color: orange;
+}
+
+.ion-icons.github{
+  color: black;
+}
+
+
 .imageText{
   position: absolute;
   bottom:8px;
   color: black;
   z-index: 10;
 }
-
 
 .overlay {
   position: fixed;
