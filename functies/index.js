@@ -4,6 +4,7 @@ component = document.querySelector(".component");
 arrow = document.querySelectorAll(".component i");
 items = document.querySelectorAll(".progress-list li");
 list = carousel.querySelectorAll("div");
+navMenu = document.querySelectorAll(".nav-link");
 let isDragStart = false, prevPageX, prevScrollLeft, positionDiff;
 let firstImgWidth = component.clientWidth;
 
@@ -184,9 +185,8 @@ document.getElementById("hamburger").addEventListener("click", function() {
   navMenu.classList.toggle("active");
 })
 
-list.forEach(slide => {
-  slide.addEventListener("click", () => {
-    AboutMe = document.getElementById(slide.dataset.th+'Page');
+function GoToPage(slide) {
+  AboutMe = document.getElementById(slide.dataset.th+'Page');
     AboutMe.classList.toggle("off");
 
     carousel.classList.toggle("active");
@@ -213,6 +213,31 @@ list.forEach(slide => {
     totalSeconds = 0;
     timer = !timer;
     dragBlock = !dragBlock;
+}
+
+list.forEach(slide => {
+  slide.addEventListener("click", () => {
+    GoToPage(slide)
+  })
+})
+
+navMenu.forEach(link => {
+  link.addEventListener("click", () => {
+    slide = document.querySelector("[data-th=" + CSS.escape(link.innerHTML) + "]");
+    for (let i = 0; i < list.length; i++){
+      if (list[i].classList.contains("active")){
+        if (slide == list[i]){
+          GoToPage(slide);
+          return 0;
+        } else {
+          GoToPage(list[i]);
+          GoToPage(slide);
+          return 0;
+        }
+      }
+    } 
+    GoToPage(slide)
+    return 0;
   })
 })
 
