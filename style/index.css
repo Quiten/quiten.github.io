@@ -51,6 +51,7 @@
 @media screen and (max-width: 900px){
   .flexRow {
     background-color: #5a487e;
+    width: 40vw;
   }
 
   .mainPage{
@@ -63,9 +64,10 @@
 
   .mainPage.Project {
     translate: 0px 60%;
-    left: 50%;
+    left: 52%;
     transform: translate(-50%, -50%);
-  }
+    background-color: #5a487e;
+    }
 
   .flexRow{
     flex-direction: column;
@@ -510,14 +512,6 @@ body {
   max-width: 10vw;
   height: 27vh;
 }
-
-.emptyEnd {
-  position: absolute;
-  width: 30vw;
-  max-width: 10vw;
-  height: 27vh;
-}
-
 
 #about {
   margin-left: 20%;
